@@ -16,6 +16,9 @@ Notes:
 the maximum number is first.
 """
 def max_and_min(input_str):
-    # Your code here
+    numbers = list(map(int, input_str.split()))
+    return ("%d %d" % (max( numbers ), min( numbers )))
 
-
+print(max_and_min("1 2 3 4 5"))
+print(max_and_min("1 2 -3 4 5"))
+print(max_and_min("1 9 3 4 -5"))

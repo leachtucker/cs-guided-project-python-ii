@@ -25,9 +25,7 @@ Notes:
 import datetime
 
 def data_type(value):
-    classStr = str(type(value))
-    objType = classStr.split("<class '")[1].split("'")[0]
-    return(objType)
+    return(type(value).__name__)
 
 print(data_type([]))
 print(data_type({'key': 'value'}))
