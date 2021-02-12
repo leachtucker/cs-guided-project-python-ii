@@ -19,11 +19,7 @@ def last(a, n):
     if (n > len(a)):
         return "invalid"
 
-    lst = []
-    for num in range(1, n + 1):
-        lst.append(a[len(a) - num])
-
-    lst.reverse()
+    lst = a[ -n: len(a) ]
     return lst
 
 
