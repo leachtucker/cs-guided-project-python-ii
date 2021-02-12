@@ -16,5 +16,16 @@ Notes:
 
 
 def last(a, n):
-    # Your code here
+    if (n > len(a)):
+        return "invalid"
 
+    lst = []
+    for num in range(1, n + 1):
+        lst.append(a[len(a) - num])
+
+    lst.reverse()
+    return lst
+
+
+# Solved
+print(last([1, 2, 3, 4], 3))
