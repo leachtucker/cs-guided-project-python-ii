@@ -16,11 +16,20 @@ Examples:
 - data_type([1, 2, 3, 4]) ➞ "list"
 - data_type({'key': "value"}) ➞ "dictionary"
 - data_type("This is an example string.") ➞ "string"
-- data_type(datetime.date(2018,1,1)) ➞ "date" 
+- data_type(datetime.date(2018,1,1)) ➞ "date"
 
 Notes:
 - Return the name of the data type as a lowercase string.
 """
+
+import datetime
+
 def data_type(value):
-    # Your code here
+    return(type(value).__name__)
+
+print(data_type([]))
+print(data_type({'key': 'value'}))
+print(data_type("This is an example string."))
+print(data_type(datetime.date(2018,1,1)))
+
 

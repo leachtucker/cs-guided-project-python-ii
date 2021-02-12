@@ -24,5 +24,21 @@ Notes:
 
 
 def emotify(txt):
-    # Your code here
+    words = txt.split()
+
+    for i in range(len(words)):
+        if (words[i].lower() == "smile"):
+            words[i] = ":D"
+        elif (words[i].lower() == "grin"):
+            words[i] = ":)"
+        elif (words[i].lower() == "sad"):
+            words[i] = ":("
+
+    return words
+
+
+print(emotify("Make me smile"))
+print(emotify("Make me grin"))
+print(emotify("Make me sad"))
+
 
